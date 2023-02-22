@@ -20,20 +20,6 @@ public class facebookTask {
 
         driver.findElement(By.partialLinkText("Nie")).click();  //forgotten password
 
-//        driver.navigate().to("https://www.google.com/");
-//                Thread.sleep(3000);
-//
-//                driver.navigate().back();
-//                Thread.sleep(3000);
-//
-//                driver.navigate().forward();
-//                Thread.sleep(3000);
-//
-//                driver.navigate().refresh();
-//                Thread.sleep(3000);
-
-
-
 
 
     }
