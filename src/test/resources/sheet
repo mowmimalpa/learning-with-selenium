@@ -1,0 +1,42 @@
+    /(ukośnik) -
+Wybiera element lub elementy względne w stosunku do elementu głównego, na przykład:
+/html: wybiera główny element HTML; ukośnik (/) użyty na początku definiuje ścieżkę bezwzględną,
+html/body/table: wybiera wszystkie elementy table, które są dziećmi HTML.
+Ukośnik (/) użyty na początku kodu elementu definiuje ścieżkę bezwzględną.
+Użyty w środku definiuje relacje przodka i potomków, na przykład /div/table zwraca element div zawierający obiekt table.
+
+//(podwójny ukośnik) -
+Wybiera w dokumencie węzeł lub węzły spełniające kryteria, niezależnie od jego położenia, na przykład:
+//table wybierze wszystkie elementy table bez względu na to, gdzie znajdują się w dokumencie,
+//tr//td wybiera wszystkie elementy td,
+//a//img wybiera wszystkie elementy img, które są dziećmi elementu a (kotwica).
+Podwójny ukośnik (//) użyty w środku definiuje relację potomków,
+na przykład html /html//title zwraca element title, który jest potomkiem elementu html.
+
+.(kropka) -
+Reprezentuje bieżący węzeł
+
+..(podwójna kropka) -
+Wybiera rodzica bieżącego węzła, na przykład //table/.. zwraca element div.
+
+@ -
+
+Reprezentuje atrybut, na przykład:
+//@id: wybiera wszystkie elementy, gdzie zdefiniowano atrybut id bez względu na to, gdzie one są w dokumencie,
+//img/@alt: wybiera wszystkie elementy img, gdzie zdefiniowano atrybut @alt.
+
+
+
+
+starts-with()(Przykłąd:input[starts-with(@ id,'ctrl')]) -  Zaczyna się od:
+Jeśli na przykład identyfikator ID elementu to ctrl_12, funkcja ta wyszuka i zwróci elementy z ctrl na początku identyfikatora ID.
+
+ends-with()(Przykład:input[ends-with(@ id,'_userName')]- Kończy się na:
+Jeśli na przykład identyfikator elementu to a_1_userName, funkcja wyszuka i zwróci elementy z _userName na końcu identyfikatora
+
+contains()(Przykład:Input[contains(@ id,'userName')] - Zawiera:
+Jeśli na przykład identyfikator dla elementu to panel_login_userName_textfield,
+do dopasowania i zlokalizowania elementu funkcja wykorzysta część userName w środku.
+
+
+
